@@ -14,10 +14,9 @@
     <name>Domain Objects for Aves</name>
 
     <dependencies>
-
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 

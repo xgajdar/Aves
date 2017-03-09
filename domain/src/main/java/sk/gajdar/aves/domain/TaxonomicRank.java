@@ -1,6 +1,8 @@
-package sk.gajdar.aves;
+package sk.gajdar.aves.domain;
 
-public enum TaxonomicRank {
+import sk.gajdar.aves.domain.api.HasScientific;
+
+public enum TaxonomicRank implements HasScientific {
 
     CLASS("classis", true),
     SUPERORDER("superordo"),
@@ -11,6 +13,7 @@ public enum TaxonomicRank {
 
     private String scientific;
     private boolean main;
+    private String suffix;
 
     TaxonomicRank(String scientific) {
         this(scientific, false);
@@ -21,11 +24,16 @@ public enum TaxonomicRank {
         this.main = main;
     }
 
+    @Override
     public String getScientific() {
         return scientific;
     }
 
     public boolean isMain() {
         return main;
+    }
+
+    public String getSuffix() {
+        return suffix;
     }
 }
